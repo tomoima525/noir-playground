@@ -29,7 +29,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["@noir-lang/aztec_backend", "npm:0.10.0"],\
-            ["@noir-lang/barretenberg", "npm:2.18.0"],\
+            ["@noir-lang/barretenberg", "npm:2.22.0"],\
             ["@noir-lang/noir_wasm", "npm:0.10.0"],\
             ["@types/node", "npm:18.11.16"],\
             ["@yarnpkg/sdks", "npm:3.0.0-rc.33"],\
@@ -126,14 +126,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@noir-lang/aztec_backend", "npm:0.10.0"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:0.12.0", {\
+          "packageLocation": "./.yarn/cache/@noir-lang-aztec_backend-npm-0.12.0-80b603d50b-3e41752b8a.zip/node_modules/@noir-lang/aztec_backend/",\
+          "packageDependencies": [\
+            ["@noir-lang/aztec_backend", "npm:0.12.0"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["@noir-lang/barretenberg", [\
-        ["npm:2.18.0", {\
-          "packageLocation": "./.yarn/cache/@noir-lang-barretenberg-npm-2.18.0-3e33cd51e7-11d487bc6f.zip/node_modules/@noir-lang/barretenberg/",\
+        ["npm:2.22.0", {\
+          "packageLocation": "./.yarn/cache/@noir-lang-barretenberg-npm-2.22.0-2ac7a84568-6cab0b758c.zip/node_modules/@noir-lang/barretenberg/",\
           "packageDependencies": [\
-            ["@noir-lang/barretenberg", "npm:2.18.0"],\
-            ["@noir-lang/aztec_backend", "npm:0.10.0"],\
+            ["@noir-lang/barretenberg", "npm:2.22.0"],\
+            ["@noir-lang/aztec_backend", "npm:0.12.0"],\
             ["@types/detect-node", "npm:2.0.0"],\
             ["@types/levelup", "npm:4.3.3"],\
             ["buffer-browserify", "npm:0.2.5"],\
@@ -1034,7 +1041,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["hello_world", "workspace:."],\
             ["@noir-lang/aztec_backend", "npm:0.10.0"],\
-            ["@noir-lang/barretenberg", "npm:2.18.0"],\
+            ["@noir-lang/barretenberg", "npm:2.22.0"],\
             ["@noir-lang/noir_wasm", "npm:0.10.0"],\
             ["@types/node", "npm:18.11.16"],\
             ["@yarnpkg/sdks", "npm:3.0.0-rc.33"],\
