@@ -74,17 +74,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@noir-lang/aztec_backend@npm:0.10.0":
-  version: 0.10.0
-  resolution: "@noir-lang/aztec_backend@npm:0.10.0"
-  checksum: 6c96a52ed1bcc8c15edc46b95e65bb36d7ca931388bb68a94accb3a9324e90a413c4c4368ab5c79fd032380285c97c66e0b07d21a0251a9e4210220587775b23
-  languageName: node
-  linkType: hard
-
 "@noir-lang/aztec_backend@npm:0.11.0":
   version: 0.11.0
   resolution: "@noir-lang/aztec_backend@npm:0.11.0"
   checksum: a2aefcf18c7419b178c42fc94189a8650273940046e404c80d42208c209aa1e18bbf9bd4594b9659e8436da36c0328e9fc235ef3d2c0db29f314eaef712cd98d
+  languageName: node
+  linkType: hard
+
+"@noir-lang/aztec_backend@npm:0.12.0":
+  version: 0.12.0
+  resolution: "@noir-lang/aztec_backend@npm:0.12.0"
+  checksum: 3e41752b8ab4726fd598d64b879735080b0a1f56500f9a88c00b5e2742bbc9c762c63f4083b622fa2148c62868c4ca4bcc1ebed7a9702d180a5e91b554bcc2cc
   languageName: node
   linkType: hard
 
@@ -111,10 +111,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@noir-lang/noir_wasm@npm:^0.10.0":
-  version: 0.10.0
-  resolution: "@noir-lang/noir_wasm@npm:0.10.0"
-  checksum: bfba5778d40daa0d041dd2b269f3b55f6a821e132fe2d565e1c8b7a50fc3e498c63b04fa9554732aa7bf8466ea07482ebc725e002764ab19c3c83cd55c7f1c33
+"@noir-lang/noir-source-resolver@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@noir-lang/noir-source-resolver@npm:1.0.0"
+  checksum: 08cb6b145bccc521bb56cfe0af2a25369558b8266098b79bc432eb3cb653d3085cce8d7b5dacedf8c6f455a25128c709e5255bf54c69d0c435fb75c07d39b8db
+  languageName: node
+  linkType: hard
+
+"@noir-lang/noir_wasm@npm:0.2.0-ed0e1ab":
+  version: 0.2.0-ed0e1ab
+  resolution: "@noir-lang/noir_wasm@npm:0.2.0-ed0e1ab"
+  peerDependencies:
+    "@noir-lang/noir-source-resolver": 1.0.0
+  checksum: 10e4a6f9d8cccbc284d6112001736b879c21d178eff998e3573d977cdd8410bc28c72ad6d5eb421da13e6d91d948dc678347d609b0a09552452fc77a13d7a19d
   languageName: node
   linkType: hard
 
@@ -853,9 +862,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "hello_world@workspace:."
   dependencies:
-    "@noir-lang/aztec_backend": 0.10.0
+    "@noir-lang/aztec_backend": 0.12.0
     "@noir-lang/barretenberg": 2.19.0
-    "@noir-lang/noir_wasm": ^0.10.0
+    "@noir-lang/noir-source-resolver": ^1.0.0
+    "@noir-lang/noir_wasm": 0.2.0-ed0e1ab
     "@types/node": ^18.11.16
     "@yarnpkg/sdks": ^3.0.0-rc.33
     ts-node: ^10.9.1

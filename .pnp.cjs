@@ -28,9 +28,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
-            ["@noir-lang/aztec_backend", "npm:0.10.0"],\
+            ["@noir-lang/aztec_backend", "npm:0.12.0"],\
             ["@noir-lang/barretenberg", "npm:2.19.0"],\
-            ["@noir-lang/noir_wasm", "npm:0.10.0"],\
+            ["@noir-lang/noir-source-resolver", "npm:1.0.0"],\
+            ["@noir-lang/noir_wasm", "virtual:9fc587a2fc70483922effb0824d8374c26a30277ce45cf51192eec6a0158bf7b20c85f1e2287c2031a5f6e3a4e23ea5718a6e5a25037501e8b112b4fe1769a57#npm:0.2.0-ed0e1ab"],\
             ["@types/node", "npm:18.11.16"],\
             ["@yarnpkg/sdks", "npm:3.0.0-rc.33"],\
             ["ts-node", "virtual:9fc587a2fc70483922effb0824d8374c26a30277ce45cf51192eec6a0158bf7b20c85f1e2287c2031a5f6e3a4e23ea5718a6e5a25037501e8b112b4fe1769a57#npm:10.9.1"],\
@@ -120,17 +121,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@noir-lang/aztec_backend", [\
-        ["npm:0.10.0", {\
-          "packageLocation": "./.yarn/cache/@noir-lang-aztec_backend-npm-0.10.0-e105a7236a-6c96a52ed1.zip/node_modules/@noir-lang/aztec_backend/",\
-          "packageDependencies": [\
-            ["@noir-lang/aztec_backend", "npm:0.10.0"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:0.11.0", {\
           "packageLocation": "./.yarn/cache/@noir-lang-aztec_backend-npm-0.11.0-dbed706290-a2aefcf18c.zip/node_modules/@noir-lang/aztec_backend/",\
           "packageDependencies": [\
             ["@noir-lang/aztec_backend", "npm:0.11.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:0.12.0", {\
+          "packageLocation": "./.yarn/cache/@noir-lang-aztec_backend-npm-0.12.0-80b603d50b-3e41752b8a.zip/node_modules/@noir-lang/aztec_backend/",\
+          "packageDependencies": [\
+            ["@noir-lang/aztec_backend", "npm:0.12.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -159,11 +160,33 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["@noir-lang/noir_wasm", [\
-        ["npm:0.10.0", {\
-          "packageLocation": "./.yarn/cache/@noir-lang-noir_wasm-npm-0.10.0-45421950fc-bfba5778d4.zip/node_modules/@noir-lang/noir_wasm/",\
+      ["@noir-lang/noir-source-resolver", [\
+        ["npm:1.0.0", {\
+          "packageLocation": "./.yarn/cache/@noir-lang-noir-source-resolver-npm-1.0.0-8371ae11eb-08cb6b145b.zip/node_modules/@noir-lang/noir-source-resolver/",\
           "packageDependencies": [\
-            ["@noir-lang/noir_wasm", "npm:0.10.0"]\
+            ["@noir-lang/noir-source-resolver", "npm:1.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@noir-lang/noir_wasm", [\
+        ["npm:0.2.0-ed0e1ab", {\
+          "packageLocation": "./.yarn/cache/@noir-lang-noir_wasm-npm-0.2.0-ed0e1ab-5016298f38-10e4a6f9d8.zip/node_modules/@noir-lang/noir_wasm/",\
+          "packageDependencies": [\
+            ["@noir-lang/noir_wasm", "npm:0.2.0-ed0e1ab"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:9fc587a2fc70483922effb0824d8374c26a30277ce45cf51192eec6a0158bf7b20c85f1e2287c2031a5f6e3a4e23ea5718a6e5a25037501e8b112b4fe1769a57#npm:0.2.0-ed0e1ab", {\
+          "packageLocation": "./.yarn/__virtual__/@noir-lang-noir_wasm-virtual-221f31a550/0/cache/@noir-lang-noir_wasm-npm-0.2.0-ed0e1ab-5016298f38-10e4a6f9d8.zip/node_modules/@noir-lang/noir_wasm/",\
+          "packageDependencies": [\
+            ["@noir-lang/noir_wasm", "virtual:9fc587a2fc70483922effb0824d8374c26a30277ce45cf51192eec6a0158bf7b20c85f1e2287c2031a5f6e3a4e23ea5718a6e5a25037501e8b112b4fe1769a57#npm:0.2.0-ed0e1ab"],\
+            ["@noir-lang/noir-source-resolver", "npm:1.0.0"],\
+            ["@types/noir-lang__noir-source-resolver", null]\
+          ],\
+          "packagePeers": [\
+            "@noir-lang/noir-source-resolver",\
+            "@types/noir-lang__noir-source-resolver"\
           ],\
           "linkType": "HARD"\
         }]\
@@ -1040,9 +1063,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["hello_world", "workspace:."],\
-            ["@noir-lang/aztec_backend", "npm:0.10.0"],\
+            ["@noir-lang/aztec_backend", "npm:0.12.0"],\
             ["@noir-lang/barretenberg", "npm:2.19.0"],\
-            ["@noir-lang/noir_wasm", "npm:0.10.0"],\
+            ["@noir-lang/noir-source-resolver", "npm:1.0.0"],\
+            ["@noir-lang/noir_wasm", "virtual:9fc587a2fc70483922effb0824d8374c26a30277ce45cf51192eec6a0158bf7b20c85f1e2287c2031a5f6e3a4e23ea5718a6e5a25037501e8b112b4fe1769a57#npm:0.2.0-ed0e1ab"],\
             ["@types/node", "npm:18.11.16"],\
             ["@yarnpkg/sdks", "npm:3.0.0-rc.33"],\
             ["ts-node", "virtual:9fc587a2fc70483922effb0824d8374c26a30277ce45cf51192eec6a0158bf7b20c85f1e2287c2031a5f6e3a4e23ea5718a6e5a25037501e8b112b4fe1769a57#npm:10.9.1"],\

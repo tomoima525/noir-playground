@@ -2,9 +2,10 @@
   "name": "hello_world",
   "packageManager": "yarn@3.2.2",
   "dependencies": {
-    "@noir-lang/aztec_backend": "0.10.0",
+    "@noir-lang/aztec_backend": "0.12.0",
     "@noir-lang/barretenberg": "2.19.0",
-    "@noir-lang/noir_wasm": "^0.10.0"
+    "@noir-lang/noir-source-resolver": "^1.0.0",
+    "@noir-lang/noir_wasm": "0.2.0-ed0e1ab"
   },
   "devDependencies": {
     "@types/node": "^18.11.16",
