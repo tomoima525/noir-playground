@@ -1,10 +1,8 @@
 import { compile } from "@noir-lang/noir_wasm";
 import {
   setup_generic_prover_and_verifier,
-  create_proof,
-  verify_proof,
-  // create_proof_with_witness,
-} from "@noir-lang/barretenberg/dest/client_proofs";
+  // @ts-ignore -- no types
+} from "@noir-lang/barretenberg";
 import path from "path";
 import { writeFileSync } from "fs";
 const program = async () => {
@@ -13,10 +11,6 @@ const program = async () => {
   );
 
   let acir = compiled_program.circuit;
-  const abi = compiled_program.abi;
-  abi.x = 3;
-  abi.y = 4;
-  abi.return = 12;
 
   const [prover, verifier] = await setup_generic_prover_and_verifier(acir);
 
