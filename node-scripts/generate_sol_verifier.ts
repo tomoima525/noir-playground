@@ -1,30 +1,30 @@
-// 1_mul.ts
 import { compile } from "@noir-lang/noir_wasm";
 import {
   setup_generic_prover_and_verifier,
-  create_proof,
-  verify_proof,
   // @ts-ignore -- no types
 } from "@noir-lang/barretenberg";
 import path from "path";
-
+import { writeFileSync } from "fs";
 const program = async () => {
   const compiled_program = compile(
     path.resolve(__dirname, "../circuits/src/main.nr")
   );
 
   let acir = compiled_program.circuit;
-  const abi = compiled_program.abi;
-  abi.x = 3;
-  abi.y = 4;
-  abi.return = 12;
-  const { parameters, ...proofInput } = abi;
-  let [prover, verifier] = await setup_generic_prover_and_verifier(acir);
-  const proof = await create_proof(prover, acir, proofInput);
-  const verified = await verify_proof(verifier, proof);
-  console.log({ verified });
+
+  const [prover, verifier] = await setup_generic_prover_and_verifier(acir);
+
+  const sc = verifier.SmartContract();
+
+  syncWriteFile("../src/plonk_vk.sol", sc);
   return true;
 };
+
+function syncWriteFile(filename: string, data: any) {
+  writeFileSync(path.join(__dirname, filename), data, {
+    flag: "w",
+  });
+}
 
 program().then((v) => {
   process.exit(0);
