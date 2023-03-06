@@ -6,8 +6,11 @@ import {
 import path from "path";
 import { writeFileSync } from "fs";
 const program = async () => {
+  const circuitPath = process.argv[2];
+  const solName = process.argv[3];
+  console.log({ circuitPath });
   const compiled_program = compile(
-    path.resolve(__dirname, "../circuits/src/main.nr")
+    path.resolve(__dirname, `../${circuitPath}`)
   );
 
   let acir = compiled_program.circuit;
@@ -16,7 +19,7 @@ const program = async () => {
 
   const sc = verifier.SmartContract();
 
-  syncWriteFile("../src/plonk_vk.sol", sc);
+  syncWriteFile(`../src/${solName}_plonk_vk.sol`, sc);
   return true;
 };
 

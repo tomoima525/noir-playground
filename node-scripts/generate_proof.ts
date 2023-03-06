@@ -10,8 +10,10 @@ import path from "path";
 
 // From https://github.com/whitenois3/nplate/blob/main/test/utils/ffiProof.ts#L11
 const program = async () => {
+  const circuitPath = process.argv[2];
+  console.log({ circuitPath });
   const compiled_program = compile(
-    path.resolve(__dirname, "../circuits/src/main.nr")
+    path.resolve(__dirname, `../${circuitPath}`)
   );
 
   let acir = compiled_program.circuit;
