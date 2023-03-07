@@ -17,13 +17,14 @@ const program = async () => {
   );
 
   let acir = compiled_program.circuit;
-  const abi = compiled_program.abi;
-  abi.x = 3;
-  abi.y = 4;
-  abi.return = 12;
-  const { parameters, ...proofInput } = abi;
+  const abi = {
+    x: 3,
+    y: 4,
+    return: 12,
+  };
+  console.log({ abi });
   let [prover, verifier] = await setup_generic_prover_and_verifier(acir);
-  const proof = await create_proof(prover, acir, proofInput);
+  const proof = await create_proof(prover, acir, abi);
   const verified = await verify_proof(verifier, proof);
   // simple output -> easy to use by ffi
   console.log(proof.toString("hex"));
