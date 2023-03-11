@@ -10,6 +10,21 @@ import { generateHashPathInput, path_to_uint8array } from "../utils";
 import { generateMerkleProof } from "./generateMerkleProof";
 
 const program = async () => {
+  // MerkleProof
+  const merkleProof = await generateMerkleProof(
+    path.resolve(__dirname, `./tree.json`),
+    "AX" // index 0
+  );
+
+  // Verify that the index 0 exists in the merkle tree
+  const proofInput = {
+    root: `0x${merkleProof?.root}`,
+    index: 0,
+    leaf: `0x${merkleProof?.leaf}`,
+    siblings: generateHashPathInput(merkleProof?.siblings || []),
+  };
+
+  console.log(JSON.stringify(proofInput));
   // Load program
   const acirPath = process.argv[2];
   console.log({ acirPath });
@@ -20,20 +35,6 @@ const program = async () => {
   console.log("read in acir");
 
   const [prover, verifier] = await setup_generic_prover_and_verifier(acir);
-
-  // MerkleProof
-  const merkleProof = await generateMerkleProof(
-    path.resolve(__dirname, `./tree.json`),
-    "AX" // index 0
-  );
-
-  // Verify that the index 0 exists in the merkle tree
-  const proofInput = {
-    root: `0x` + merkleProof?.root,
-    index: 0,
-    leaf: `0x` + merkleProof?.leaf,
-    siblings: generateHashPathInput(merkleProof?.siblings || []),
-  };
 
   const proof = await create_proof(prover, acir, proofInput);
   const verified = await verify_proof(verifier, proof);
