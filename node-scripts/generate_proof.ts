@@ -24,10 +24,10 @@ const program = async () => {
   const { parameters, ...proofInput } = abi;
   let [prover, verifier] = await setup_generic_prover_and_verifier(acir);
   const proof = await create_proof(prover, acir, proofInput);
-  const verified = await verify_proof(verifier, proof);
+  // const verified = await verify_proof(verifier, proof);
   // simple output -> easy to use by ffi
-  console.log(proof.toString("hex"));
-  console.log("Is the proof valid : ", verified);
+  console.log(`0x${proof.toString("hex")}`);
+  // console.log(proof.toString("hex"));
 };
 
 program().then((v) => {
