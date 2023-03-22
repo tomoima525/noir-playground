@@ -19,14 +19,15 @@ const program = async () => {
   let acir = compiled_program.circuit;
   const abi = compiled_program.abi;
   abi.x = 3;
-  abi.y = 4;
-  abi.return = 12;
+  abi.y = 1;
+  abi.return = 4;
   const { parameters, ...proofInput } = abi;
   let [prover, verifier] = await setup_generic_prover_and_verifier(acir);
   const proof = await create_proof(prover, acir, proofInput);
   const verified = await verify_proof(verifier, proof);
   // simple output -> easy to use by ffi
   console.log(proof.toString("hex"));
+  console.log("Is the proof valid : ", verified);
 };
 
 program().then((v) => {

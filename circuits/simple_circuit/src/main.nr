@@ -1,4 +1,3 @@
-fn main(x: u32, y: pub u32) -> pub u32 {
-    let z = x * y;
-    z
+fn main(x: pub Field, y: pub Field) -> pub Field {
+    x + y
 }
