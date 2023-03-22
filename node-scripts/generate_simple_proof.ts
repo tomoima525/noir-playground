@@ -21,11 +21,10 @@ const program = async () => {
   //   path.resolve(__dirname, `../${circuitPath}`)
   // );
   // let acir = compiled_program.circuit;
-  const acirPath = process.argv[2];
-  const p = path.resolve(__dirname, `../${acirPath}`);
+  const p = path.resolve(__dirname, `../circuits/simple_circuit/target/c.acir`);
+  console.log({ p });
   const acirByteArray = path_to_uint8array(p);
   const acir = acir_read_bytes(acirByteArray);
-  console.log({ p });
   const abi = {
     x: 3,
     y: 4,
@@ -37,6 +36,7 @@ const program = async () => {
   const verified = await verify_proof(verifier, proof);
   // simple output -> easy to use by ffi
   console.log(proof.toString("hex"));
+  console.log("Is the proof valid : ", verified);
 };
 
 program().then((v) => {
