@@ -516,19 +516,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@noir-lang/noir-source-resolver@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "@noir-lang/noir-source-resolver@npm:1.0.0"
-  checksum: 08cb6b145bccc521bb56cfe0af2a25369558b8266098b79bc432eb3cb653d3085cce8d7b5dacedf8c6f455a25128c709e5255bf54c69d0c435fb75c07d39b8db
+"@noir-lang/noir-source-resolver@npm:1.1.1":
+  version: 1.1.1
+  resolution: "@noir-lang/noir-source-resolver@npm:1.1.1"
+  checksum: 43acc4c1a720ad0837db68bfac59efe58fe2b7467a8508807857aa738e3095d088547692efba5655f3e89e6c4747307c769e582d6ef5b4d454c7787090601a82
   languageName: node
   linkType: hard
 
-"@noir-lang/noir_wasm@github:noir-lang/noir_wasm#344738adc66965fa20b0bb0c13a83ac5ceedf486":
-  version: 0.2.0-93d83bf
-  resolution: "@noir-lang/noir_wasm@https://github.com/noir-lang/noir_wasm.git#commit=344738adc66965fa20b0bb0c13a83ac5ceedf486"
+"@noir-lang/noir_wasm@npm:^0.3.2-fa0e9cff":
+  version: 0.3.2-fa0e9cff
+  resolution: "@noir-lang/noir_wasm@npm:0.3.2-fa0e9cff"
   peerDependencies:
-    "@noir-lang/noir-source-resolver": 1.0.0
-  checksum: c92ef1222b5c2da535208a1e98295d0ac2421355290ef2671a2b96eea52961609de54ed07d488b55d946bd9c64443bb5318816d34d3df9cac45b9947f6f661f6
+    "@noir-lang/noir-source-resolver": 1.1.1
+  checksum: 900fd340aa997ecd2c862080f5ec4c92bc1715cf99be2c778e36791052f3b640a57d414cc01e9c0bc113e43e1b7c0111e054eb985374497051a390798b339503
   languageName: node
   linkType: hard
 
@@ -1807,8 +1807,8 @@ __metadata:
   dependencies:
     "@noir-lang/aztec_backend": "github:kobyhallx/aztec-backend#1bcdd4bf67dad1ab977867f1d655bcab7085a518"
     "@noir-lang/barretenberg": "github:noir-lang/barretenberg#39a1547875f941ef6640217a42d8f34972425c97"
-    "@noir-lang/noir-source-resolver": ^1.0.0
-    "@noir-lang/noir_wasm": "github:noir-lang/noir_wasm#344738adc66965fa20b0bb0c13a83ac5ceedf486"
+    "@noir-lang/noir-source-resolver": 1.1.1
+    "@noir-lang/noir_wasm": ^0.3.2-fa0e9cff
     "@types/node": ^18.11.16
     "@yarnpkg/sdks": ^3.0.0-rc.33
     ethers: ^5.6.9

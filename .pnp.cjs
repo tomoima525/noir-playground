@@ -30,8 +30,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@noir-lang/aztec_backend", "https://github.com/kobyhallx/aztec-backend.git#commit=1bcdd4bf67dad1ab977867f1d655bcab7085a518"],\
             ["@noir-lang/barretenberg", "virtual:9fc587a2fc70483922effb0824d8374c26a30277ce45cf51192eec6a0158bf7b20c85f1e2287c2031a5f6e3a4e23ea5718a6e5a25037501e8b112b4fe1769a57#https://github.com/noir-lang/barretenberg.git#commit=39a1547875f941ef6640217a42d8f34972425c97"],\
-            ["@noir-lang/noir-source-resolver", "npm:1.0.0"],\
-            ["@noir-lang/noir_wasm", "virtual:9fc587a2fc70483922effb0824d8374c26a30277ce45cf51192eec6a0158bf7b20c85f1e2287c2031a5f6e3a4e23ea5718a6e5a25037501e8b112b4fe1769a57#https://github.com/noir-lang/noir_wasm.git#commit=344738adc66965fa20b0bb0c13a83ac5ceedf486"],\
+            ["@noir-lang/noir-source-resolver", "npm:1.1.1"],\
+            ["@noir-lang/noir_wasm", "virtual:9fc587a2fc70483922effb0824d8374c26a30277ce45cf51192eec6a0158bf7b20c85f1e2287c2031a5f6e3a4e23ea5718a6e5a25037501e8b112b4fe1769a57#npm:0.3.2-fa0e9cff"],\
             ["@types/node", "npm:18.11.16"],\
             ["@yarnpkg/sdks", "npm:3.0.0-rc.33"],\
             ["ethers", "npm:5.7.2"],\
@@ -617,27 +617,27 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@noir-lang/noir-source-resolver", [\
-        ["npm:1.0.0", {\
-          "packageLocation": "./.yarn/cache/@noir-lang-noir-source-resolver-npm-1.0.0-8371ae11eb-08cb6b145b.zip/node_modules/@noir-lang/noir-source-resolver/",\
+        ["npm:1.1.1", {\
+          "packageLocation": "./.yarn/cache/@noir-lang-noir-source-resolver-npm-1.1.1-e3aed2303e-43acc4c1a7.zip/node_modules/@noir-lang/noir-source-resolver/",\
           "packageDependencies": [\
-            ["@noir-lang/noir-source-resolver", "npm:1.0.0"]\
+            ["@noir-lang/noir-source-resolver", "npm:1.1.1"]\
           ],\
           "linkType": "HARD"\
         }]\
       ]],\
       ["@noir-lang/noir_wasm", [\
-        ["https://github.com/noir-lang/noir_wasm.git#commit=344738adc66965fa20b0bb0c13a83ac5ceedf486", {\
-          "packageLocation": "./.yarn/cache/@noir-lang-noir_wasm-https-db24fb9298-c92ef1222b.zip/node_modules/@noir-lang/noir_wasm/",\
+        ["npm:0.3.2-fa0e9cff", {\
+          "packageLocation": "./.yarn/cache/@noir-lang-noir_wasm-npm-0.3.2-fa0e9cff-c52c5ecb76-900fd340aa.zip/node_modules/@noir-lang/noir_wasm/",\
           "packageDependencies": [\
-            ["@noir-lang/noir_wasm", "https://github.com/noir-lang/noir_wasm.git#commit=344738adc66965fa20b0bb0c13a83ac5ceedf486"]\
+            ["@noir-lang/noir_wasm", "npm:0.3.2-fa0e9cff"]\
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:9fc587a2fc70483922effb0824d8374c26a30277ce45cf51192eec6a0158bf7b20c85f1e2287c2031a5f6e3a4e23ea5718a6e5a25037501e8b112b4fe1769a57#https://github.com/noir-lang/noir_wasm.git#commit=344738adc66965fa20b0bb0c13a83ac5ceedf486", {\
-          "packageLocation": "./.yarn/__virtual__/@noir-lang-noir_wasm-virtual-91dfd4e566/0/cache/@noir-lang-noir_wasm-https-db24fb9298-c92ef1222b.zip/node_modules/@noir-lang/noir_wasm/",\
+        ["virtual:9fc587a2fc70483922effb0824d8374c26a30277ce45cf51192eec6a0158bf7b20c85f1e2287c2031a5f6e3a4e23ea5718a6e5a25037501e8b112b4fe1769a57#npm:0.3.2-fa0e9cff", {\
+          "packageLocation": "./.yarn/__virtual__/@noir-lang-noir_wasm-virtual-0e86c92fd4/0/cache/@noir-lang-noir_wasm-npm-0.3.2-fa0e9cff-c52c5ecb76-900fd340aa.zip/node_modules/@noir-lang/noir_wasm/",\
           "packageDependencies": [\
-            ["@noir-lang/noir_wasm", "virtual:9fc587a2fc70483922effb0824d8374c26a30277ce45cf51192eec6a0158bf7b20c85f1e2287c2031a5f6e3a4e23ea5718a6e5a25037501e8b112b4fe1769a57#https://github.com/noir-lang/noir_wasm.git#commit=344738adc66965fa20b0bb0c13a83ac5ceedf486"],\
-            ["@noir-lang/noir-source-resolver", "npm:1.0.0"],\
+            ["@noir-lang/noir_wasm", "virtual:9fc587a2fc70483922effb0824d8374c26a30277ce45cf51192eec6a0158bf7b20c85f1e2287c2031a5f6e3a4e23ea5718a6e5a25037501e8b112b4fe1769a57#npm:0.3.2-fa0e9cff"],\
+            ["@noir-lang/noir-source-resolver", "npm:1.1.1"],\
             ["@types/noir-lang__noir-source-resolver", null]\
           ],\
           "packagePeers": [\
@@ -2123,8 +2123,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["hello_world", "workspace:."],\
             ["@noir-lang/aztec_backend", "https://github.com/kobyhallx/aztec-backend.git#commit=1bcdd4bf67dad1ab977867f1d655bcab7085a518"],\
             ["@noir-lang/barretenberg", "virtual:9fc587a2fc70483922effb0824d8374c26a30277ce45cf51192eec6a0158bf7b20c85f1e2287c2031a5f6e3a4e23ea5718a6e5a25037501e8b112b4fe1769a57#https://github.com/noir-lang/barretenberg.git#commit=39a1547875f941ef6640217a42d8f34972425c97"],\
-            ["@noir-lang/noir-source-resolver", "npm:1.0.0"],\
-            ["@noir-lang/noir_wasm", "virtual:9fc587a2fc70483922effb0824d8374c26a30277ce45cf51192eec6a0158bf7b20c85f1e2287c2031a5f6e3a4e23ea5718a6e5a25037501e8b112b4fe1769a57#https://github.com/noir-lang/noir_wasm.git#commit=344738adc66965fa20b0bb0c13a83ac5ceedf486"],\
+            ["@noir-lang/noir-source-resolver", "npm:1.1.1"],\
+            ["@noir-lang/noir_wasm", "virtual:9fc587a2fc70483922effb0824d8374c26a30277ce45cf51192eec6a0158bf7b20c85f1e2287c2031a5f6e3a4e23ea5718a6e5a25037501e8b112b4fe1769a57#npm:0.3.2-fa0e9cff"],\
             ["@types/node", "npm:18.11.16"],\
             ["@yarnpkg/sdks", "npm:3.0.0-rc.33"],\
             ["ethers", "npm:5.7.2"],\
