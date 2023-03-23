@@ -15,7 +15,7 @@ contract PlonkVkTest is Test {
         string[] memory inputs = new string[](3);
         inputs[0] = "yarn";
         inputs[1] = "ts-node";
-        inputs[2] = "node-scripts/generate_simple_proof.ts";
+        inputs[2] = "node-scripts/generate_ffi.ts";
         return inputs;
     }
 

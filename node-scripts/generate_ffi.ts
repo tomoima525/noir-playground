@@ -26,8 +26,8 @@ const program = async () => {
   let [prover, verifier] = await setup_generic_prover_and_verifier(acir);
   const proof = await create_proof(prover, acir, abi);
   const verified = await verify_proof(verifier, proof);
+  // simple output -> easy to use by ffi
   console.log(proof.toString("hex"));
-  console.log("verified: ", verified);
 };
 
 program().then((v) => {
