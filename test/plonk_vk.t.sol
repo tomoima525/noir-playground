@@ -2,7 +2,7 @@
 pragma solidity ^0.8.13;
 
 import "forge-std/Test.sol";
-import "../src/simple_plonk_vk.sol";
+import "../src/plonk_vk.sol";
 
 contract PlonkVkTest is Test {
     TurboVerifier public verifier;

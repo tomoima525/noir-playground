@@ -22,7 +22,6 @@ const program = async () => {
   // );
   // let acir = compiled_program.circuit;
   const p = path.resolve(__dirname, `../circuits/simple_circuit/target/c.acir`);
-  console.log({ p });
   const acirByteArray = path_to_uint8array(p);
   const acir = acir_read_bytes(acirByteArray);
   const abi = {
@@ -30,13 +29,11 @@ const program = async () => {
     y: 4,
     return: 12,
   };
-  console.log({ abi });
   let [prover, verifier] = await setup_generic_prover_and_verifier(acir);
   const proof = await create_proof(prover, acir, abi);
   const verified = await verify_proof(verifier, proof);
   // simple output -> easy to use by ffi
   console.log(proof.toString("hex"));
-  console.log("Is the proof valid : ", verified);
 };
 
 program().then((v) => {
