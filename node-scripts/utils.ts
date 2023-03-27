@@ -13,3 +13,7 @@ export function generateHashPathInput(hashes: BigNumberish[]) {
   }
   return hash_path_input;
 }
+
+export function toUint8array(circuit: string) {
+  return new Uint8Array(Buffer.from(circuit, "hex"));
+}

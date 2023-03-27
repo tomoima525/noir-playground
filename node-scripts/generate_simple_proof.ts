@@ -9,10 +9,8 @@ import {
 } from "@noir-lang/barretenberg";
 import path from "path";
 import { readFileSync } from "fs";
+import { toUint8array } from "./utils";
 
-function toUint8array(circuit: string) {
-  return new Uint8Array(Buffer.from(circuit, "hex"));
-}
 // From https://github.com/signorecello/waldo/blob/main/test/index.ts
 const program = async () => {
   const p = path.resolve(__dirname, `../circuits/simple_circuit/src/main.nr`);
