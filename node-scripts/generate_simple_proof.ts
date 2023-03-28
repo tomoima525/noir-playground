@@ -9,7 +9,6 @@ import {
 } from "@noir-lang/barretenberg";
 import path from "path";
 import { readFileSync } from "fs";
-import { toUint8array } from "./utils";
 
 // From https://github.com/signorecello/waldo/blob/main/test/index.ts
 const program = async () => {
@@ -25,7 +24,7 @@ const program = async () => {
   });
   const compiled = await compile({});
   console.log(compiled);
-  const acirByteArray = toUint8array(compiled.circuit);
+  const acirByteArray = compiled.circuit;
   const acir = acir_read_bytes(acirByteArray);
   const abi = {
     x: 3,

@@ -7,7 +7,6 @@ import {
 } from "@noir-lang/barretenberg";
 import path from "path";
 import { readFileSync, writeFileSync } from "fs";
-import { toUint8array } from "./utils";
 
 const program = async () => {
   const solName = process.argv[3];
@@ -25,8 +24,8 @@ const program = async () => {
   });
   const compiled = await compile({});
   console.log(compiled);
-  let acirByteArray = toUint8array(compiled.circuit);
-  let acir = acir_read_bytes(acirByteArray);
+  const acirByteArray = compiled.circuit;
+  const acir = acir_read_bytes(acirByteArray);
 
   const [prover, verifier] = await setup_generic_prover_and_verifier(acir);
 
