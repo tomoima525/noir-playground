@@ -1,5 +1,6 @@
-// 1_mul.ts
-import { acir_read_bytes } from "@noir-lang/noir_wasm";
+// @ts-ignore
+import { initialiseResolver } from "@noir-lang/noir-source-resolver";
+import { acir_read_bytes, compile } from "@noir-lang/noir_wasm";
 import {
   setup_generic_prover_and_verifier,
   create_proof,
@@ -15,9 +16,18 @@ function path_to_uint8array(path: string) {
 }
 // From https://github.com/whitenois3/nplate/blob/main/test/utils/ffiProof.ts#L11
 const program = async () => {
-  const p = path.resolve(__dirname, `../circuits/simple_circuit/target/c.acir`);
-  const acirByteArray = path_to_uint8array(p);
-  const acir = acir_read_bytes(acirByteArray);
+  const p = path.resolve(__dirname, `../circuits/simple_circuit/src/main.nr`);
+  initialiseResolver(() => {
+    try {
+      const string = readFileSync(p, { encoding: "utf8" });
+      return string;
+    } catch (err) {
+      console.error(err);
+      throw err;
+    }
+  });
+  const compiled = await compile({});
+  const acir = acir_read_bytes(compiled.circuit);
   const abi = {
     x: 3,
     y: 4,
