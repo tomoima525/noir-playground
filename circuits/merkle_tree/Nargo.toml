@@ -1,5 +1,5 @@
 [package]
-authors = [""]
+authors = ["tomo"]
 compiler_version = "0.1"
 
 [dependencies]

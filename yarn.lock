@@ -483,10 +483,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@noir-lang/aztec_backend@github:kobyhallx/aztec-backend#1bcdd4bf67dad1ab977867f1d655bcab7085a518":
-  version: 0.1.0-0c3b2f2
-  resolution: "@noir-lang/aztec_backend@https://github.com/kobyhallx/aztec-backend.git#commit=1bcdd4bf67dad1ab977867f1d655bcab7085a518"
-  checksum: ed560139552a226ac6d2fc5b43af8be14568b300ec52cb61403de3a9f10e3a8dc95bc4220af064fb3f88e4832645ba55f5f569813fea73f6b60b6218db5191f1
+"@noir-lang/aztec_backend@npm:^0.1.0-0c3b2f2":
+  version: 0.1.2
+  resolution: "@noir-lang/aztec_backend@npm:0.1.2"
+  checksum: 5511c3ca57a99f7abd81b5838dc828bcd9c6bce096e3215061d41357e1d687a72ec49c2b7ab0abe367667751480e4013bd3ff4e6efbafc890ed7729b75ec8019
   languageName: node
   linkType: hard
 
@@ -523,12 +523,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@noir-lang/noir_wasm@npm:^0.3.2-fa0e9cff":
-  version: 0.3.2-fa0e9cff
-  resolution: "@noir-lang/noir_wasm@npm:0.3.2-fa0e9cff"
+"@noir-lang/noir_wasm@npm:^0.3.2-bcdfd526":
+  version: 0.3.2-fd3c99a
+  resolution: "@noir-lang/noir_wasm@npm:0.3.2-fd3c99a"
   peerDependencies:
     "@noir-lang/noir-source-resolver": 1.1.1
-  checksum: 900fd340aa997ecd2c862080f5ec4c92bc1715cf99be2c778e36791052f3b640a57d414cc01e9c0bc113e43e1b7c0111e054eb985374497051a390798b339503
+  checksum: b227182b41c1dc694c6e6e7c10f216a287e51d1465898b151b9224e66d6d2cfc07dcc9e5e191fc7b6634a3c86a4c0b871e0d8f441df77a31d3a8ecca3b0d6a17
   languageName: node
   linkType: hard
 
@@ -1805,10 +1805,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "hello_world@workspace:."
   dependencies:
-    "@noir-lang/aztec_backend": "github:kobyhallx/aztec-backend#1bcdd4bf67dad1ab977867f1d655bcab7085a518"
+    "@noir-lang/aztec_backend": ^0.1.0-0c3b2f2
     "@noir-lang/barretenberg": "github:noir-lang/barretenberg#39a1547875f941ef6640217a42d8f34972425c97"
     "@noir-lang/noir-source-resolver": 1.1.1
-    "@noir-lang/noir_wasm": ^0.3.2-fa0e9cff
+    "@noir-lang/noir_wasm": ^0.3.2-bcdfd526
     "@types/node": ^18.11.16
     "@yarnpkg/sdks": ^3.0.0-rc.33
     ethers: ^5.6.9
