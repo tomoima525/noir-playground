@@ -15,7 +15,8 @@
     "typescript": "4.9.3"
   },
   "scripts": {
-    "proof:simple": "yarn ts-node ./node-scripts/generate_simple_proof './circuits/simple_circuit/src/main.nr'",
+    "proof:simple": "yarn ts-node ./node-scripts/generate_simple_proof",
+    "proof:poseidon": "yarn ts-node ./node-scripts/generate_poseidon_proof",
     "sol:simple": "yarn ts-node ./node-scripts/generate_sol_verifier.ts './circuits/simple_circuit/src/main.nr' 'simple'"
   }
 }

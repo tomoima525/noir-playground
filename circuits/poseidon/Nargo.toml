@@ -1,0 +1,5 @@
+[package]
+authors = ["tomo"]
+compiler_version = "0.5.1"
+
+[dependencies]
