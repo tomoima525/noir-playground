@@ -23,7 +23,7 @@ const program = async () => {
     }
   });
   const compiled = await compile({});
-  console.log(compiled);
+  console.log("========compiled=========\n", compiled);
   const acirByteArray = compiled.circuit;
   const acir = acir_read_bytes(acirByteArray);
   const abi = {
@@ -32,6 +32,7 @@ const program = async () => {
     return: 12,
   };
   let [prover, verifier] = await setup_generic_prover_and_verifier(acir);
+  console.log("===== prover, verifier ready =====\n");
   const proof = await create_proof(prover, acir, abi);
   const verified = await verify_proof(verifier, proof);
   console.log(proof.toString("hex"));

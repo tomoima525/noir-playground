@@ -5,7 +5,7 @@
     "@noir-lang/aztec_backend": "github:kobyhallx/aztec-backend#1bcdd4bf67dad1ab977867f1d655bcab7085a518",
     "@noir-lang/barretenberg": "github:noir-lang/barretenberg#39a1547875f941ef6640217a42d8f34972425c97",
     "@noir-lang/noir-source-resolver": "1.1.1",
-    "@noir-lang/noir_wasm": "^0.3.2-fa0e9cff",
+    "@noir-lang/noir_wasm": "0.3.2-fa0e9cff",
     "ethers": "^5.6.9"
   },
   "devDependencies": {
@@ -15,7 +15,7 @@
     "typescript": "4.9.3"
   },
   "scripts": {
-    "proof:simple": "yarn ts-node ./node-scripts/generate_proof './circuits/simple_circuit/src/main.nr'",
+    "proof:simple": "yarn ts-node ./node-scripts/generate_simple_proof './circuits/simple_circuit/src/main.nr'",
     "sol:simple": "yarn ts-node ./node-scripts/generate_sol_verifier.ts './circuits/simple_circuit/src/main.nr' 'simple'"
   }
 }
