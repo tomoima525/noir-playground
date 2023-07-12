@@ -1,12 +1,15 @@
 // @ts-ignore
 import { initialiseResolver } from "@noir-lang/noir-source-resolver";
 import { acir_read_bytes, compile } from "@noir-lang/noir_wasm";
-import {
-  setup_generic_prover_and_verifier,
-  // @ts-ignore -- no types
-} from "@noir-lang/barretenberg";
+import * as bbjs from "@aztec/bb.js/dest/index.js";
 import path from "path";
 import { readFileSync, writeFileSync } from "fs";
+import { fileURLToPath } from "url";
+import { dirname } from "path";
+
+// ESM does not have __dirname or __filename
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const program = async () => {
   const solName = process.argv[3];
@@ -25,12 +28,11 @@ const program = async () => {
   const compiled = await compile({});
   console.log(compiled);
   const acirByteArray = compiled.circuit;
-  const acir = acir_read_bytes(acirByteArray);
-
-  const [prover, verifier] = await setup_generic_prover_and_verifier(acir);
-
-  const sc = verifier.SmartContract();
-
+  // const acir = acir_read_bytes(acirByteArray);
+  const bb = await bbjs.newBarretenbergApiSync();
+  // Not generating Solidity file
+  const sc = bb.acirGetSolidityVerifier(acirByteArray);
+  console.log(sc);
   syncWriteFile(`../src/${solName}_plonk_vk.sol`, sc);
   return true;
 };
