@@ -2,7 +2,7 @@
   "name": "hello_world",
   "packageManager": "yarn@3.2.2",
   "dependencies": {
-    "@aztec/bb.js": "alpha",
+    "@aztec/bb.js": "0.3.3",
     "@noir-lang/noir-source-resolver": "1.1.1",
     "@noir-lang/noir_wasm": "0.3.2-fa0e9cff",
     "ethers": "^5.6.9"
