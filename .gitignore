@@ -13,3 +13,5 @@
 # Compiler files from Foundry
 cache/
 out/
+
+node_modules/

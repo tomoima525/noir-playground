@@ -1,13 +1,14 @@
 use dep::std;
+use dep::noir_merkleroot;
 
 fn main(
   root: Field, 
   leaf: Field, 
-  index: Field,
+  path_indices: [Field; 8],
   siblings: [Field; 8],
 ) -> pub Field {
     
-    let new_root = std::merkle::compute_root_from_leaf(leaf, index, siblings);
-    constrain new_root == root;
+    let new_root = noir_merkleroot::compute_merkle_root(leaf, path_indices, siblings);
+    assert(new_root == root);
     new_root
 }
